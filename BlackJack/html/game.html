@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/game.js"></script>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="navdiv">
+                <a href="/index.html">Home</a>
+                <a href="/html/login.html">Login</a>
+                <a href="/html/Register.html">Register</a>
+                <a href="/html/game.html">Play</a>
+                <a href="/html/score.html">Scores</a>
+            </div>
+        </div>
+
+        <!-- Game elements go here, including images and buttons -->
+        <div class="boxed">
+            <h2>Dealer: <span id="dealer-sum"></span></h2>
+            <div id="dealer-cards">
+                <img id="hidden" src="/img/cards/BACK.png">
+            </div>
+
+            <h2>You: <span id="player-sum"></span></h2>
+            <div id="player-cards"></div>
+
+            <br>
+            <button id="hit">Hit</button>
+            <button id="stay">Stay</button>
+            <div id="results"></div>
+            <button id="play-again-btn" style="display: none;">Play Again</button>
+        </div>
+    </body>
+</html>

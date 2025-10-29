@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --accent-color: rgba(0, 0, 0, 0.6);
+    --base-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --input-color: lab(74.38% 30.81 12.74 / 0.664);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: cardo, serif, sans-serif, Arial;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+}
+body {
+    font-family: cardo, serif, sans-serif, Arial;
+    text-align: left;
+    min-height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+h1.welcome{
+    padding-top: 120px;
+    background-color: rgba(245, 245, 245, 0.36);
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Styles for navigation bar */
+.navbar {
+    background-color: var(--input-color);
+    overflow: hidden;
+    font-family: cardo, serif, sans-serif, Arial;
+    font-size: 1.5rem;
+    font-weight: 900;
+    box-shadow: 0 4px 20px var(--input-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}   
+.navbar a:hover {
+    background-color: var(--accent-color);
+    color: red;
+}   
+.navbar .active {
+    background-color: var(--input-color);
+    color: var(--base-color);
+}
+.navbar .icon {
+    display: none;
+}
+
+
+/* --- Login and Register pages styles --- */
+.wrapper {
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    width: max(30%, 280px);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+#login-form, #register-form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+}
+input:hover{
+    border: 2px solid var(--accent-color);
+}
+input:focus{
+    outline: none;
+    border-color: var(--text-color);
+}
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+}
+input::placeholder{
+    color: var(--text-color);
+    opacity: 1;
+}
+button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 4em;
+    background-color: var(--accent-color);
+    color: red;
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--text-color);
+    color: var(--base-color);
+}
+button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px var(--text-color);
+}
+
+
+/* Styles for validation error messages */
+.incorrect {
+    border: 2px solid red;
+}
+.error-msg {
+    font-weight: 600;
+    color: red;
+    font-size: 1.2em;
+    margin: 4px 0 8px 0;
+}
+
+
+/* --- Game page styles --- */
+.boxed {
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#dealer-cards img {
+    padding-top: 50px;
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+#player-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+#hit, #stay {
+    font-size:20px;
+    font-family:Arial;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#566963;
+    font-weight:bold;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    text-shadow:inset 0px -1px 0px #2b665e;
+    background:linear-gradient(#768d87, #6c7c7c);
+}
+#hit:hover, #stay:hover {
+      background: linear-gradient(#6c7c7c, #768d87);
+}
+#results {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: green;
+}
+#play-again-btn:hover {
+      background: #eb5045;
+}
+
+
+/* --- Score page table styles --- */
+#scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#scores-table thead {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+#scores-table th, 
+#scores-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+#scores-table th {
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: cardo, serif, sans-serif, Arial;
+    color: var(--base-color);
+
+}
+
+#scores-table tbody tr:nth-child(even) {
+    background-color: rgb(249, 249, 249);
+}
+
+#scores-table tbody tr:hover {
+    background-color: var(--input-color);
+    cursor: pointer;
+}

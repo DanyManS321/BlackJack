@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <h1 class="welcome">Welcome to Black Jack game</h1>
+        <div class="navbar">
+            <div class="navdiv">
+                <a href="/index.html">Home</a>
+                <a href="/html/login.html">Login</a>
+                <a href="/html/Register.html">Register</a>
+                <a href="/html/game.html">Play</a>
+                <a href="/html/score.html">Scores</a>
+            </div>
+        </div>
+
+
+        <script type="module">
+            import {Blackjack} from './js/Blackjack.mjs';
+            const blackjack = new Blackjack();
+
+        </script>
+    </body>
+</html>

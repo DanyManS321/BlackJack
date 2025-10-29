@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="/js/login.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navdiv">
+            <a href="/index.html">Home</a>
+            <a href="/html/login.html">Login</a>
+            <a href="/html/Register.html">Register</a>
+            <a href="/html/game.html">Play</a>
+            <a href="/html/score.html">Scores</a>
+        </div>
+    </div>
+    <!-- Login elements including labels, input boxes, and Login button -->
+    <div class = "wrapper">
+        <h1>Login</h1>
+        <p class="error-msg"></p>
+        <div id="login-form">
+            <div class="username-div">
+                <label for="login-username-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    </svg>
+                </label>
+                <input type="text" name="username" id="login-username-input" placeholder="Username" required>
+            </div>
+            <div class="password-div">
+                <label for="login-password-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    </svg>
+                </label>
+                <input type="password" name="password" id="login-password-input" placeholder="Password" required>
+            </div>
+            <div><button type="submit" id="login-button">Login</button></div>
+        </div>
+    </div>
+</body>
+</html>
